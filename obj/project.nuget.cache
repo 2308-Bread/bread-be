@@ -1,15 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "+lejBD+xsXZ1mgTGljBH2sKK/hbYlArAVs7rkQBmEZ6KbTfjGLjFPBSI5vCwemmeKeasWobnn/cg58WGBI2kjw==",
+  "dgSpecHash": "m2DHTxUBDo7Bw4fn3L7IvTqLOStSVY4eIDEsGVIUbrLgcXQvQ0GPj1jzcOOE70kLog2NlGHQkNCZkfot+S2FYA==",
   "success": true,
   "projectFilePath": "/Users/ericbelongea/Documents/turing_work/4mod/bread_be/bread_be.csproj",
   "expectedPackageFiles": [
+    "/Users/ericbelongea/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
     "/Users/ericbelongea/.nuget/packages/azure.core/1.35.0/azure.core.1.35.0.nupkg.sha512",
     "/Users/ericbelongea/.nuget/packages/azure.identity/1.10.3/azure.identity.1.10.3.nupkg.sha512",
     "/Users/ericbelongea/.nuget/packages/dapper/2.1.28/dapper.2.1.28.nupkg.sha512",
     "/Users/ericbelongea/.nuget/packages/microsoft.aspnetcore.openapi/8.0.1/microsoft.aspnetcore.openapi.8.0.1.nupkg.sha512",
     "/Users/ericbelongea/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.1/microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
-    "/Users/ericbelongea/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",
+    "/Users/ericbelongea/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/Users/ericbelongea/.nuget/packages/microsoft.data.sqlclient/5.1.5/microsoft.data.sqlclient.5.1.5.nupkg.sha512",
     "/Users/ericbelongea/.nuget/packages/microsoft.data.sqlclient.sni.runtime/5.1.1/microsoft.data.sqlclient.sni.runtime.5.1.1.nupkg.sha512",
     "/Users/ericbelongea/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
