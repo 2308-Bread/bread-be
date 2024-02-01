@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/ericbelongea/Documents/turing_work/4mod/bread_be/bread_be.csproj": {}
+    "/Users/ericbelongea/Documents/turing_work/4mod/bread-be/bread_be.csproj": {}
   },
   "projects": {
-    "/Users/ericbelongea/Documents/turing_work/4mod/bread_be/bread_be.csproj": {
+    "/Users/ericbelongea/Documents/turing_work/4mod/bread-be/bread_be.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/ericbelongea/Documents/turing_work/4mod/bread_be/bread_be.csproj",
+        "projectUniqueName": "/Users/ericbelongea/Documents/turing_work/4mod/bread-be/bread_be.csproj",
         "projectName": "bread_be",
-        "projectPath": "/Users/ericbelongea/Documents/turing_work/4mod/bread_be/bread_be.csproj",
+        "projectPath": "/Users/ericbelongea/Documents/turing_work/4mod/bread-be/bread_be.csproj",
         "packagesPath": "/Users/ericbelongea/.nuget/packages/",
-        "outputPath": "/Users/ericbelongea/Documents/turing_work/4mod/bread_be/obj/",
+        "outputPath": "/Users/ericbelongea/Documents/turing_work/4mod/bread-be/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/ericbelongea/.nuget/NuGet/NuGet.Config"
@@ -38,13 +38,25 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.28, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[8.0.1, )"
             },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[5.1.5, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
+            },
+            "automapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
             }
           },
           "imports": [
