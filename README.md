@@ -1,5 +1,13 @@
 ## Built With
-
+<p align="center">
+  <img src="https://camo.githubusercontent.com/cf8ce03b1f86674dc94383197d84300f128723ed5aeb13a2ff67fa710b219dbc/68747470733a2f2f646576656c6f7065722e6665646f726170726f6a6563742e6f72672f7374617469632f6c6f676f2f6373686172702e706e67" width="100">
+  <img src="https://miro.medium.com/v2/resize:fit:4800/format:webp/0*84ceNnue3KaNVoDs" width="175">
+  <img src="https://a0.anyrgb.com/pngimg/832/512/docker-logo-gitlab-software-repository-continuous-integration-software-build-readme-repository-docker-software-deployment-nodejs-thumbnail.png" width= "100">
+  <img src="https://styles.redditmedia.com/t5_2rkse/styles/communityIcon_yq8rp6c884y61.png" width= "100">
+  <img src="https://avatars.githubusercontent.com/u/10251060?s=280&v=4" width= "100">
+  <img src="https://pbs.twimg.com/profile_images/1326963467119575041/OTgxd3mt_400x400.jpg" width= "100">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC-B_MIu5Th8IwEU6MZiitQUW5-_sbg_6ldOaldVQViWTjJ5YCWtFQcps_KVVMfBu0H8w&usqp=CAU" width= "100">
+</p>
 
 ## Setup
 
