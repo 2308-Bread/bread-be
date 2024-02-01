@@ -1,0 +1,6 @@
+@bread_be_HostAddress = http://localhost:5299
+
+GET {{bread_be_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
