@@ -1,4 +1,6 @@
 using BreadAPI.Data;
+using System.Globalization;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -41,6 +43,8 @@ else
     app.UseCors("ProdCors");
     app.UseHttpsRedirection();
 }
+// CultureInfo.DefaultThreadCulture = CultureInfo.InvariantCulture;
+// CultureInfo.DefaultThreadUICulture = CultureInfo.InvariantCulture;
 
 app.UseAuthorization();
 
