@@ -1,3 +1,11 @@
+## Overview
+
+This is an API Repository built in C# leveraging .NET 8 and deployed on Azure. 
+
+Using this API will allow you to get the 10 traditional breads that originate from each country around the world. While we here at "le Belongea Boulangerie" care about home made bread, we are building this API in a new framework for our first time.
+
+We are creating this API using .NET and in Rails. Running Load Tests on each of the API and comparing the efficiency. 
+
 ## Built With
 <p align="center">
   <img src="https://camo.githubusercontent.com/cf8ce03b1f86674dc94383197d84300f128723ed5aeb13a2ff67fa710b219dbc/68747470733a2f2f646576656c6f7065722e6665646f726170726f6a6563742e6f72672f7374617469632f6c6f676f2f6373686172702e706e67" width="100">
