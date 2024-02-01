@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "GpqVShIFoljTZCLXSDD9z1sWpekSR8OMJ91TzT4IYhwUVknZAp7s4hqxshVVBG2Y+7ltA/zDchoU7tI/OJTXtQ==",
+  "dgSpecHash": "9thKyeaZMbz7BUVx7C84w+PuYBG1NAvIhZGgsUn5qPHdsfheWcYG2u1mB+5x10t+i4CrlTPoQ9cEMRsdXpcCpA==",
   "success": true,
   "projectFilePath": "/Users/ericbelongea/Documents/turing_work/4mod/bread_be/bread_be.csproj",
   "expectedPackageFiles": [
+    "/Users/ericbelongea/.nuget/packages/dapper/2.1.28/dapper.2.1.28.nupkg.sha512",
     "/Users/ericbelongea/.nuget/packages/microsoft.aspnetcore.openapi/8.0.1/microsoft.aspnetcore.openapi.8.0.1.nupkg.sha512",
     "/Users/ericbelongea/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "/Users/ericbelongea/.nuget/packages/microsoft.openapi/1.4.3/microsoft.openapi.1.4.3.nupkg.sha512",

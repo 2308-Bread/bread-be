@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net8.0": {
+      "Dapper/2.1.28": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/Dapper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Dapper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.AspNetCore.OpenApi/8.0.1": {
         "type": "package",
         "dependencies": {
@@ -111,6 +124,27 @@
     }
   },
   "libraries": {
+    "Dapper/2.1.28": {
+      "sha512": "ha49pzOEDmCPkMxwfPSR/wxa/6RD3r42TESIgpzpi7FXq/gNVUuJVEO+wtUzntNRhtmq3BKCl0s0aAlSZLkBUA==",
+      "type": "package",
+      "path": "dapper/2.1.28",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Dapper.png",
+        "dapper.2.1.28.nupkg.sha512",
+        "dapper.nuspec",
+        "lib/net461/Dapper.dll",
+        "lib/net461/Dapper.xml",
+        "lib/net5.0/Dapper.dll",
+        "lib/net5.0/Dapper.xml",
+        "lib/net7.0/Dapper.dll",
+        "lib/net7.0/Dapper.xml",
+        "lib/netstandard2.0/Dapper.dll",
+        "lib/netstandard2.0/Dapper.xml",
+        "readme.md"
+      ]
+    },
     "Microsoft.AspNetCore.OpenApi/8.0.1": {
       "sha512": "JF0U31SByntKEhZNC8ch3CD87BLZb5AzSujOBppLdvnjYu3W2XZvlsol5hUJfxiaHOp720cUiL6wzG8Bv0fI2Q==",
       "type": "package",
@@ -455,6 +489,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "Dapper >= 2.1.28",
       "Microsoft.AspNetCore.OpenApi >= 8.0.1",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
@@ -496,6 +531,10 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "Dapper": {
+            "target": "Package",
+            "version": "[2.1.28, )"
+          },
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
             "version": "[8.0.1, )"
