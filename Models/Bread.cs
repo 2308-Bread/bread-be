@@ -5,6 +5,6 @@ namespace BreadAPI.Models
     public int BreadId {get; set;}
     public string Name {get;set;} = "";
     public string Recipe {get;set;} = "";
-    public string Desceription {get;set;} = "";
+    public string Description {get;set;} = "";
   }
 }
