@@ -28,4 +28,18 @@ public class BreadController : ControllerBase
     IEnumerable<Bread> breads = _dapper.LoadData<Bread>(sql);
     return breads;
   }
+
+  [HttpGet("GetSingleBread/{breadId}")]
+  public Bread GetSingleBread(int breadId)
+  {
+    string sql = @"
+      SELECT [BreadId],
+        [Name],
+        [Recipe],
+        [Description]
+      FROM Breads
+        WHERE BreadId = " + breadId.ToString();
+    Bread bread = _dapper.LoadDataSingle<Bread>(sql);
+    return bread;
+  }
 }
