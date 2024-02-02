@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LmA3248yMugBIGUuQs2JrBs/3Mm/W9tJ0+SlbovZ7v6uf/UnEY/QGWOsDXCsUEy1dykJQwqREYj5016aLu1HTA==",
+  "dgSpecHash": "iTG9uaFB8NccfLQQ10/bvLlfQO2E6vcBu6EEQaRDix680iAcjXMOxCwNykkiuLDENlr+4DAw4gRc2m7ogTsxfg==",
   "success": true,
-  "projectFilePath": "/Users/ericbelongea/Documents/turing_work/4mod/bread-be/bread_be.csproj",
+  "projectFilePath": "/Users/ericbelongea/Documents/turing_work/4mod/bread-be-net8/bread_be.csproj",
   "expectedPackageFiles": [
     "/Users/ericbelongea/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
     "/Users/ericbelongea/.nuget/packages/azure.core/1.35.0/azure.core.1.35.0.nupkg.sha512",

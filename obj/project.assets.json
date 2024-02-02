@@ -2608,11 +2608,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/ericbelongea/Documents/turing_work/4mod/bread-be/bread_be.csproj",
+      "projectUniqueName": "/Users/ericbelongea/Documents/turing_work/4mod/bread-be-net8/bread_be.csproj",
       "projectName": "bread_be",
-      "projectPath": "/Users/ericbelongea/Documents/turing_work/4mod/bread-be/bread_be.csproj",
+      "projectPath": "/Users/ericbelongea/Documents/turing_work/4mod/bread-be-net8/bread_be.csproj",
       "packagesPath": "/Users/ericbelongea/.nuget/packages/",
-      "outputPath": "/Users/ericbelongea/Documents/turing_work/4mod/bread-be/obj/",
+      "outputPath": "/Users/ericbelongea/Documents/turing_work/4mod/bread-be-net8/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/ericbelongea/.nuget/NuGet/NuGet.Config"
