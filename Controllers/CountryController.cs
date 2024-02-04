@@ -27,4 +27,24 @@ public class CountryController : ControllerBase
     IEnumerable<Country> countries = _dapper.LoadData<Country>(sql);
     return countries;
   }
+
+  [HttpGet("GetCountryAndBread")]
+  public IEnumerable<Country> GetCountryAndBreads(string countryName)
+  {
+    string sql = @"
+      SELECT [Countries.CountryId],
+        [Countries.Name],
+        [Countries.Description],
+        [Breads.BreadId],
+        [Breads.Name],
+        [Breads.Description],
+        [Breads.Recipe]
+      FROM Countries
+      JOIN CountryBreads ON Countries.CountryId = CountryBreads.CountryId
+      JOIN Breads ON CountryBreads.BreadId = Breads.BreadId
+      WHERE Countries.Name = {countryName}";
+    
+    IEnumerable<Country> countryandbreads = _dapper.LoadData<Country>(sql);
+    return countryandbreads;
+  }
 }

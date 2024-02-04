@@ -54,26 +54,26 @@ public class UserController : ControllerBase
     public IActionResult EditUser(User user)
     {
         // Assuming 'user' is an object of a User class
-string sql = "UPDATE Users SET ";
+        string sql = "UPDATE Users SET ";
 
-List<string> updates = new List<string>();
+        List<string> updates = new List<string>();
 
-if (!user.FirstName.IsNullOrEmpty())
-{
-    updates.Add("[FirstName] = '" + user.FirstName + "'");
-}
+        if (!user.FirstName.IsNullOrEmpty())
+        {
+            updates.Add("[FirstName] = '" + user.FirstName + "'");
+        }
 
-if (!user.LastName.IsNullOrEmpty())
-{
-    updates.Add("[LastName] = '" + user.LastName + "'");
-}
+        if (!user.LastName.IsNullOrEmpty())
+        {
+            updates.Add("[LastName] = '" + user.LastName + "'");
+        }
 
-if (!user.Email.IsNullOrEmpty())
-{
-    updates.Add("[Email] = '" + user.Email + "'");
-}
+        if (!user.Email.IsNullOrEmpty())
+        {
+            updates.Add("[Email] = '" + user.Email + "'");
+        }
 
-sql += string.Join(", ", updates) + " WHERE UserId = " + user.UserId;
+        sql += string.Join(", ", updates) + " WHERE UserId = " + user.UserId;
 
         
         Console.WriteLine(sql);
