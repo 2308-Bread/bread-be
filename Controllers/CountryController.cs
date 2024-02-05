@@ -28,23 +28,23 @@ public class CountryController : ControllerBase
     return countries;
   }
 
-  [HttpGet("GetCountryAndBread")]
-  public IEnumerable<Country> GetCountryAndBreads(string countryName)
+  [HttpGet("GetCountryAndBread/{countryName}")]
+  public IEnumerable<CountryBread> GetCountryAndBreads(string countryName)
   {
     string sql = @"
-      SELECT [Countries.CountryId],
-        [Countries.Name],
-        [Countries.Description],
-        [Breads.BreadId],
-        [Breads.Name],
-        [Breads.Description],
-        [Breads.Recipe]
+      SELECT Countries.CountryId AS CountryId,
+        Countries.Name AS CountryName,
+        Countries.Description AS CountryDescription,
+        Breads.BreadId,
+        Breads.Name,
+        Breads.Description,
+        Breads.Recipe
       FROM Countries
       JOIN CountryBreads ON Countries.CountryId = CountryBreads.CountryId
       JOIN Breads ON CountryBreads.BreadId = Breads.BreadId
-      WHERE Countries.Name = {countryName}";
+      WHERE Countries.Name = '" + countryName + "'";
     
-    IEnumerable<Country> countryandbreads = _dapper.LoadData<Country>(sql);
+    IEnumerable<CountryBread> countryandbreads = _dapper.LoadData<CountryBread>(sql);
     return countryandbreads;
   }
 }
