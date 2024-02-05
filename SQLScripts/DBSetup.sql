@@ -87,3 +87,8 @@ INSERT INTO CountryBreads (CountryId, BreadId) VALUES (7, 19);
 INSERT INTO CountryBreads (CountryId, BreadId) VALUES (8, 20);
 INSERT INTO CountryBreads (CountryId, BreadId) VALUES (9, 21);
 INSERT INTO CountryBreads (CountryId, BreadId) VALUES (10, 22);
+
+INSERT INTO CountryBreads (CountryId, BreadId) VALUES 
+        (3, 13),
+        (3,14);
+
