@@ -40,16 +40,17 @@ namespace BreadAPI.Data
 
         public (IEnumerable<T1>, T2) LoadDataMultiple<T1, T2>(string breadSql, string userSql)
         {
-            using IDbConnection dbConnection = new SqlConnection(_config.GetConnectionString("DefaultConnection"));
+            IDbConnection dbConnection = new SqlConnection(_config.GetConnectionString("DefaultConnection"));
             // return dbConnection.QueryMultiple(breadSql, userSql);
-            dbConnection.Open();
+            // dbConnection.Open();
 
             var result = dbConnection.QueryMultiple(breadSql, userSql);
 
+            // var user = result.Read<T2>().FirstOrDefault();
             var breads = result.Read<T1>().ToList();
-            var user = result.IsConsumed ? default(T2) : result.Read<T2>().SingleOrDefault();
-
+            var user = result.IsConsumed ? default(T2) : result.Read<T2>().FirstOrDefault();
             // var user = result.Read<T2>().SingleOrDefault();
+
 
             // while (!result.IsConsumed) { }
 
