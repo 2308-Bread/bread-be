@@ -1,6 +1,8 @@
 using System.Data;
+using System.Data.Common;
 using BreadAPI.Models;
 using Dapper;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 
 namespace BreadAPI.Data
@@ -56,5 +58,22 @@ namespace BreadAPI.Data
 
             return (breads, user);
         }
+
+        // public IEnumerable<T> MultiSet<T>(string sql)
+        // {
+        //     IDbConnection dbConnection = new SqlConnection(_config.GetConnectionString("DefaultConnection"));
+        //     return dbConnection.Query<T>(sql);
+
+        //     // List<User> user = null;
+        //     // List<Bread> breads = null;
+            
+        //     // using (var result = dbConnection.QueryMultiple(sql))
+        //     // {
+        //     //     user = result.Read<User>().ToList();
+        //     //     breads = result.Read<Bread>().ToList();
+        //     // }
+
+        //     // return List<User> (List<User> user, List<Bread> breads).user;
+        // }
     }
 }

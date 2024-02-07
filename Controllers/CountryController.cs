@@ -28,8 +28,28 @@ public class CountryController : ControllerBase
     return countries;
   }
 
+  // [HttpGet("GetCountryAndBread/{countryName}")]
+  // public IEnumerable<CountryBread> GetCountryAndBreads(string countryName)
+  // {
+  //   string sql = @"
+  //     SELECT Countries.CountryId AS CountryId,
+  //       Countries.Name AS CountryName,
+  //       Countries.Description AS CountryDescription,
+  //       Breads.BreadId,
+  //       Breads.Name AS BreadName,
+  //       Breads.Description,
+  //       Breads.Recipe
+  //     FROM Countries
+  //     JOIN CountryBreads ON Countries.CountryId = CountryBreads.CountryId
+  //     JOIN Breads ON CountryBreads.BreadId = Breads.BreadId
+  //     WHERE Countries.Name = '" + countryName + "'";
+    
+  //   IEnumerable<CountryBread> countryandbreads = _dapper.LoadData<CountryBread>(sql);
+  //   return countryandbreads;
+  // }
+
   [HttpGet("GetCountryAndBread/{countryName}")]
-  public IEnumerable<CountryBread> GetCountryAndBreads(string countryName)
+  public ApiResponse GetCountryAndBreads(string countryName)
   {
     string sql = @"
       SELECT Countries.CountryId AS CountryId,
@@ -43,8 +63,50 @@ public class CountryController : ControllerBase
       JOIN CountryBreads ON Countries.CountryId = CountryBreads.CountryId
       JOIN Breads ON CountryBreads.BreadId = Breads.BreadId
       WHERE Countries.Name = '" + countryName + "'";
-    
-    IEnumerable<CountryBread> countryandbreads = _dapper.LoadData<CountryBread>(sql);
-    return countryandbreads;
+
+      IEnumerable<CountryBreadResponse> countryandbreads = _dapper.LoadData<CountryBreadResponse>(sql);
+
+        var response = new ApiResponse
+        {
+            Country = new CountryResponse
+            {
+                Data = new CountryDataResponse
+                {
+                    Id = countryandbreads.First().CountryId,
+                    Type = "country",
+                    Attributes = new CountryAttributesResponse
+                    {
+                        Name = countryandbreads.First().CountryName,
+                        Description = countryandbreads.First().CountryDescription
+                    },
+                    Relationships = new CountryRelationshipsResponse
+                    {
+                        Breads = new BreadsRelationshipResponse
+                        {
+                            Data = countryandbreads.Select(b => new BreadsDataResponse
+                            {
+                                Id = b.BreadId,
+                                Type = "bread"
+                            }).ToArray()
+                        }
+                    }
+                }
+            },
+            Breads = new BreadsResponse
+            {
+                Data = countryandbreads.Select(b => new BreadsDataResponse
+                {
+                    Id = b.BreadId,
+                    Type = "bread",
+                    Attributes = new BreadsAttributesResponse
+                    {
+                        Name = b.Name,
+                        Description = b.Description,
+                        Recipe = b.Recipe
+                    }
+                }).ToArray()
+            }
+        };
+        return response;
   }
 }
