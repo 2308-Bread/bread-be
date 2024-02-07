@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/bread_be.props" />
+</Project>
