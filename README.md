@@ -39,3 +39,16 @@ Since the Database is being hosted with Azure Data Studios you will have to crea
 If you add anything to the repo, table, you MUST add that tables SQL to the BOTTOM of `DBSetup.sql`
 
 If you add or remove a column to the Database you MUST add the SQL querries to the file in the nested `Migrations` folder.
+
+
+
+<!-- 
+
+To Do
+
+- Update Endpoints to match Rails
+- Update ReadMe
+- Update SQLScripts 
+- Ask for PR review from Megan
+
+ -->
