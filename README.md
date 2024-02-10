@@ -1,10 +1,50 @@
+# La Boulangerie
+
+Created by: 
+- [Eric Belongea](https://www.linkedin.com/in/eric-belongea/) | [GitHub](https://github.com/EricBelongea)
+- [Clay O'Leary](https://www.linkedin.com/in/john-clay-oleary/) | [GitHub](https://github.com/Captainlearyo)
+- [Cory Powell](https://www.linkedin.com/in/coryrpow/) | [GitHub](https://github.com/coryrpow)
+- [Bobby Steckline](https://www.linkedin.com/in/rsteckline/) | [GitHub](https://github.com/rsteckline)
+- [Deanna Stevens](https://www.linkedin.com/in/deanna-sofia-stevens/) | [GitHub](https://github.com/dsstevens)
+
+## Directory
+- [Getting Started]()
+- [Built With]()
+- [Database Visualization]()
+- [Testing]()
+- [Gems and Testing ]()
+- [Learning Goals]()
+- [API Endpoints]()
+- [Endpoint Details]()
+  - [All Countries]()
+  - [Specific Country Details and Associated Breads]()
+  - [All Breads]()
+  - [Specific Bread Details]()
+  - [All Users]()
+  - [Specific Users Details]()
+ 
 ## Overview
 
 This is an API Repository built in C# leveraging .NET 8 and deployed on Azure. 
 
-Using this API will allow you to get the 10 traditional breads that originate from each country around the world. While we here at "le Belongea Boulangerie" care about home made bread, we are building this API in a new framework for our first time.
+Using this API will allow you to get traditional breads that originate from each country around the world. While we here at "le Belongea Boulangerie" care about home made bread; more countries, more breads, more recipes coming soon. 
 
 We are creating this API using .NET and in Rails. Running Load Tests on each of the API and comparing the efficiency. 
+
+### Want to see the other Repos?
+
+<u> C# && .NET </u>
+  - [.NET Repo](https://github.com/2308-Bread/dotnet-bread-be)
+  - [Frontend Repo](https://github.com/2308-Bread/dotnet-bread-fe)
+  - [Deployed Site](https://dotnet-laboulangerie.vercel.app/)
+
+<br>
+
+<u> Ruby on Rails </u>
+  - [Rails Repo](https://github.com/2308-Bread/rails_bread_be)
+  - [Frontend Repo](https://github.com/2308-Bread/rails_bread_fe)
+  - [Deployed Site](https://laboulangerie.vercel.app/)
+
 
 ## Built With
 <p align="center">
@@ -17,18 +57,31 @@ We are creating this API using .NET and in Rails. Running Load Tests on each of 
   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC-B_MIu5Th8IwEU6MZiitQUW5-_sbg_6ldOaldVQViWTjJ5YCWtFQcps_KVVMfBu0H8w&usqp=CAU" width= "100">
 </p>
 
-## Setup
+## Setup the Microsoft Environment 
 
-Install C# and .NET 8 <br>
-https://dotnet.microsoft.com/en-us/download
+1. Install [C# and .NET 8](https://dotnet.microsoft.com/en-us/download)
+<!-- https://dotnet.microsoft.com/en-us/download -->
 
-Azure Data Studio && MS SQL Sever <br>
-https://learn.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio?view=sql-server-ver16
+2. Install Azure Data Studio && MS SQL Sever [here](https://learn.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio?view=sql-server-ver16)
+<!-- https://learn.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio?view=sql-server-ver16 -->
 
-Docker (Whale Icon at bottom)<br>
-https://www.microsoft.com/en-us/sql-server/sql-server-downloads
+3. Install [Docker](https://hub.docker.com/)
+<!-- https://hub.docker.com/ -->
 
-<u>Apple Users</u><br>
+If you are wanting to make your own deployment you will have to do the following steps. 
+Deployment:
+
+azure portal  
+
+az login
+
+dotnet build --configuration Release
+
+az webapp up --sku F1 --name "YOUR_APP_NAME" --os-type linux
+
+
+
+### Apple Users
 
 If you are working on Mac with a M1 or M2 chip select the 'Apple Chip' options when downloading.
 
