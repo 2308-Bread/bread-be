@@ -15,11 +15,6 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddCors((options) =>
     {
-        // options.AddPolicy(name: MyAllowSpecificOrigins,
-        //         policy =>
-        //         {
-        //             policy.WithOrigins("http://localhost:3000")
-        //         });
         options.AddPolicy("DevCors", (corsBuilder) =>
             {
                 corsBuilder.WithOrigins("http://localhost:4200", "http://localhost:3000", "http://localhost:8000", "http://localhost:5000")
@@ -51,6 +46,7 @@ else
     // app.UseHttpsRedirection();
 }
 // app.UseHttpsRedirection();
+app.UseCors();
 
 app.UseAuthorization();
 
