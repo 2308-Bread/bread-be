@@ -43,7 +43,7 @@ if (app.Environment.IsDevelopment())
 else
 {
     app.UseCors("ProdCors");
-    // app.UseHttpsRedirection();
+    app.UseHttpsRedirection();
 }
 // app.UseHttpsRedirection();
 app.UseCors();
