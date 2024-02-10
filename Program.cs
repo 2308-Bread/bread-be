@@ -22,7 +22,7 @@ builder.Services.AddCors((options) =>
             });
         options.AddPolicy("ProdCors", (corsBuilder) =>
             {
-                corsBuilder.WithOrigins("https://myProductionSite.com")
+                corsBuilder.WithOrigins("http://localhost:300")
                     .AllowAnyMethod()
                     .AllowAnyHeader()
                     .AllowCredentials();
