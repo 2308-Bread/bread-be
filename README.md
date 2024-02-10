@@ -57,29 +57,34 @@ We are creating this API using .NET and in Rails. Running Load Tests on each of 
   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC-B_MIu5Th8IwEU6MZiitQUW5-_sbg_6ldOaldVQViWTjJ5YCWtFQcps_KVVMfBu0H8w&usqp=CAU" width= "100">
 </p>
 
-## Setup the Microsoft Environment 
+## Set up the Microsoft Environment 
 
 1. Install [C# and .NET 8](https://dotnet.microsoft.com/en-us/download)
-<!-- https://dotnet.microsoft.com/en-us/download -->
 
 2. Install Azure Data Studio && MS SQL Sever [here](https://learn.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio?view=sql-server-ver16)
-<!-- https://learn.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio?view=sql-server-ver16 -->
 
 3. Install [Docker](https://hub.docker.com/)
-<!-- https://hub.docker.com/ -->
-
-If you are wanting to make your own deployment you will have to do the following steps. 
-Deployment:
-
-azure portal  
-
-az login
-
-dotnet build --configuration Release
-
-az webapp up --sku F1 --name "YOUR_APP_NAME" --os-type linux
 
 
+### Deployment Tips (If you chose to deploy your own API)
+1.  Before anything create your Microsoft account and set up your [Azure Portal](https://azure.microsoft.com/en-us/get-started/azure-portal)
+  - Sign In or create a Free Account.
+  - A free account comes with $200 USD in credits.
+2.  In your repo have install the [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
+  - Mac
+    - `brew upgrade && brew install azure-cli`
+    - If you're having problems with those commands try running the code one at a time.
+3.  Once you have your portal set up and the azure-cli installed run the following
+  - `az login`
+4.  Once logged in run the following to build your webapp.
+  - `dotnet build --configuration Release`
+5.  Now deploy the app!
+  - `az webapp up --sku F1 --name "YOUR_APP_NAME" --os-type linux`
+    - Replace the OS Type with either windows or linux. For smaller apps there's no difference.
+6. Now go to the Azure Portal. and checkout `App Services`. You should be able to see your new app.
+7. From Azure Portal home page navigate tho ` SQL databases`. Click the plus icon to create your db. Follow the prompts and create your db. 
+  -  Save your password.
+  - Navigate to your db, this will be your new `DefaultConnection` string in your repo.
 
 ### Apple Users
 
