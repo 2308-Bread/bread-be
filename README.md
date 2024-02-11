@@ -1,11 +1,13 @@
 # La Boulangerie
 
 Created by: 
-- [Eric Belongea](https://www.linkedin.com/in/eric-belongea/) | [GitHub](https://github.com/EricBelongea)
-- [Clay O'Leary](https://www.linkedin.com/in/john-clay-oleary/) | [GitHub](https://github.com/Captainlearyo)
-- [Cory Powell](https://www.linkedin.com/in/coryrpow/) | [GitHub](https://github.com/coryrpow)
-- [Bobby Steckline](https://www.linkedin.com/in/rsteckline/) | [GitHub](https://github.com/rsteckline)
-- [Deanna Stevens](https://www.linkedin.com/in/deanna-sofia-stevens/) | [GitHub](https://github.com/dsstevens)
+- Backend 
+  - [Eric Belongea](https://www.linkedin.com/in/eric-belongea/) | [GitHub](https://github.com/EricBelongea)
+  - [Cory Powell](https://www.linkedin.com/in/coryrpow/) | [GitHub](https://github.com/coryrpow)
+  - [Clay O'Leary](https://www.linkedin.com/in/john-clay-oleary/) | [GitHub](https://github.com/Captainlearyo)
+- Frontend
+  - [Bobby Steckline](https://www.linkedin.com/in/rsteckline/) | [GitHub](https://github.com/rsteckline)
+  - [Deanna Stevens](https://www.linkedin.com/in/deanna-sofia-stevens/) | [GitHub](https://github.com/dsstevens)
 
 ## Directory
 - [Getting Started]()
@@ -45,9 +47,29 @@ We are creating this API using .NET and in Rails. Running Load Tests on each of 
   - [Frontend Repo](https://github.com/2308-Bread/rails_bread_fe)
   - [Deployed Site](https://laboulangerie.vercel.app/)
 
+<br>
+
+<u>Furture Features</u>
+ - [GitHub Projects Boards](https://github.com/orgs/2308-Bread/projects/1/views/1)
 
 ## Built With
-<p align="center">
+![MicrosoftSQLServer](https://img.shields.io/badge/Microsoft%20SQL%20Server-CC2927?style=for-the-badge&logo=microsoft%20sql%20server&logoColor=white)
+![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
+![Wiki.js](https://img.shields.io/badge/wiki.js-%231976D2.svg?style=for-the-badge&logo=wikidotjs&logoColor=white)
+![Udemy](https://img.shields.io/badge/Udemy-A435F0?style=for-the-badge&logo=Udemy&logoColor=white)
+![.Net](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white)
+![Azure](https://img.shields.io/badge/azure-%230072C6.svg?style=for-the-badge&logo=microsoftazure&logoColor=white)
+![Microsoft](https://img.shields.io/badge/Microsoft-0078D4?style=for-the-badge&logo=microsoft&logoColor=white)
+![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
+![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white)
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+![Swagger](https://img.shields.io/badge/-Swagger-%23Clojure?style=for-the-badge&logo=swagger&logoColor=white)
+![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+
+<!-- <p align="center">
+
   <img src="https://camo.githubusercontent.com/cf8ce03b1f86674dc94383197d84300f128723ed5aeb13a2ff67fa710b219dbc/68747470733a2f2f646576656c6f7065722e6665646f726170726f6a6563742e6f72672f7374617469632f6c6f676f2f6373686172702e706e67" width="100">
   <img src="https://miro.medium.com/v2/resize:fit:4800/format:webp/0*84ceNnue3KaNVoDs" width="175">
   <img src="https://a0.anyrgb.com/pngimg/832/512/docker-logo-gitlab-software-repository-continuous-integration-software-build-readme-repository-docker-software-deployment-nodejs-thumbnail.png" width= "100">
@@ -55,7 +77,7 @@ We are creating this API using .NET and in Rails. Running Load Tests on each of 
   <img src="https://avatars.githubusercontent.com/u/10251060?s=280&v=4" width= "100">
   <img src="https://pbs.twimg.com/profile_images/1326963467119575041/OTgxd3mt_400x400.jpg" width= "100">
   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC-B_MIu5Th8IwEU6MZiitQUW5-_sbg_6ldOaldVQViWTjJ5YCWtFQcps_KVVMfBu0H8w&usqp=CAU" width= "100">
-</p>
+</p> -->
 
 ## Set up the Microsoft Environment 
 
@@ -90,23 +112,19 @@ We are creating this API using .NET and in Rails. Running Load Tests on each of 
 
 If you are working on Mac with a M1 or M2 chip select the 'Apple Chip' options when downloading.
 
-### Guidelines
 
-Since the Database is being hosted with Azure Data Studios you will have to create your own DB! In this repo you will find a fodler called `SQLScripts`, here are the SQL querries that you will need inorder to setup the repo. Copy and Paste them in AzureDataStudios to get setup quickly, or just one at a time. 
+## Database Protocols
 
-If you add anything to the repo, table, you MUST add that tables SQL to the BOTTOM of `DBSetup.sql`
+Since this db is hosted via a Dockerized Azure Database studios you will have access to the current production db. 
 
-If you add or remove a column to the Database you MUST add the SQL querries to the file in the nested `Migrations` folder.
+If you are wanting to add to and add more to the db, please create your own local testing db. To do this create a new dockerized azure db studios db and change the `DefaultConnection` string in `appsettings.json` file.
 
+The `SQLScripts` file contains all the SQL needed to create the Database and seed to be concurrent with the production environment. If adding anything here please add to the `Migrations` folder or to the bottom of `SQLScripts` with data and the SQL used. 
 
+## Endpoints
 
-<!-- 
+Press `F5` on Windows and the green play button with the 'bug' on the Mac task bar to run localhost.
 
-To Do
+This will take you to Swagger at `http://localhost:5000/swagger/index.html`.
 
-- Update Endpoints to match Rails
-- Update ReadMe
-- Update SQLScripts 
-- Ask for PR review from Megan
-
- -->
+Here you will see all the endpoints and can test the responses. 
