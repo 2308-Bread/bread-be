@@ -17,9 +17,9 @@ public class UserController : ControllerBase
     }
     
     [HttpGet("TestConnection")]
-    public DateTime TestConnection()
+    public string TestConnection()
     {
-        return _dapper.LoadDataSingle<DateTime>("SELECT GETDATE()");
+        return "The API is alive!";
     }
 
     [HttpGet("GetUsers")]

@@ -4,8 +4,6 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -15,14 +13,14 @@ builder.Services.AddCors((options) =>
     {
         options.AddPolicy("DevCors", (corsBuilder) =>
             {
-                corsBuilder.WithOrigins("http://localhost:4200", "http://localhost:3000", "http://localhost:8000", "http://localhost:5299")
+                corsBuilder.WithOrigins("http://localhost:4200", "http://localhost:3000", "http://localhost:8000", "http://localhost:5000")
                     .AllowAnyMethod()
                     .AllowAnyHeader()
                     .AllowCredentials();
             });
         options.AddPolicy("ProdCors", (corsBuilder) =>
             {
-                corsBuilder.WithOrigins("https://myProductionSite.com")
+                corsBuilder.WithOrigins("https://dotnet-laboulangerie.vercel.app")
                     .AllowAnyMethod()
                     .AllowAnyHeader()
                     .AllowCredentials();
@@ -43,6 +41,8 @@ else
     app.UseCors("ProdCors");
     app.UseHttpsRedirection();
 }
+// app.UseHttpsRedirection();
+// app.UseCors();
 
 app.UseAuthorization();
 
